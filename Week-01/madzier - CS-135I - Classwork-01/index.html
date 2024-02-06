@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--
+		Student: Douglas Madzier
+		Date:    Wednesday, January 10, 2024
+    	Class:   CS-135I - Class Work-1
+	-->
+	<title>CSS Layout Example -Flexboxes</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Titan+One" rel="stylesheet">
+	<link href="css/flexbox.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<nav>
+			<ul>
+				<li class="trigger"><a href="#" class="linktrigger">Menu</a>
+					<ul>
+						<li><a href="#">Link</a></li>
+						<li><a href="#">Link</a></li>
+						<li class="dd">
+							<a href="#" class="ddtrigger">Trigger</a>
+							<ul>
+								<li><a href="#">Sub menu link</a></li>
+								<li><a href="#">Sub menu link</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Link</a></li>
+						<li><a href="#">Link</a></li>
+						<li><a href="#">Link</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<header>
+			<h1>The header - whoo!</h1>
+		</header>
+
+		<!-- Use flexboxes to make the following three sections appear side-by-side. -->
+		<div class="row">
+			<section>
+				<h1>The main content of the page</h1>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis odio fringilla, mollis neque a, porttitor ante. Sed vestibulum sed
+					turpis eu egestas. Praesent consequat turpis eu pharetra aliquam. Vivamus placerat quis nulla ut malesuada. Nam a pulvinar velit. Proin ac
+					tristique quam. Ut eu consectetur ligula. Duis ut ligula sed dolor aliquam vestibulum eget tempor nulla. Pellentesque faucibus varius nisl
+					non tempor. Cras et ex in diam blandit ullamcorper. Quisque justo nisl, convallis et luctus et, aliquet vitae nibh. Sed sed interdum lorem.
+					Pellentesque in sapien lobortis, efficitur libero eu, sodales leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+					inceptos himenaeos.
+				</p>
+				<p>
+					Sed odio justo
+
+				<table>
+					<caption>Ticket Prices for The Nutcracker</caption>
+					<colgroup>
+						<col span="1" class="rowheaders">
+						<col span="3" class="data">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Shows</th>
+							<th>Orchestra</th>
+							<th>Mezzanine</th>
+							<th>Balcony</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Friday evening</th>
+							<td>$75</td>
+							<td>$100</td>
+							<td>$85</td>
+						</tr>
+						<tr>
+							<th>Saturday matinee</th>
+							<td>$40</td>
+							<td>$50</td>
+							<td>$45</td>
+						</tr>
+						<tr>
+							<th>Saturday evening</th>
+							<td>$80</td>
+							<td>$120</td>
+							<td>$90</td>
+						</tr>
+					</tbody>
+				</table>
+				</p>
+				<p>
+					Curabitur sit amet imperdiet urna. Nam tempus, metus in pretium tempus, massa urna sollicitudin tortor, non finibus sapien lorem vitae
+					libero. Ut sed justo id mauris sollicitudin iaculis a at enim. Nullam id efficitur erat, mollis sodales diam. Nam at sollicitudin enim.
+					Vivamus consectetur nibh ligula, quis euismod erat volutpat ut. Phasellus sit amet est vitae nisl bibendum maximus.
+				</p>
+				<p>
+					Aliquam dignissim arcu rutrum nunc ornare laoreet. Duis odio enim, varius sit amet volutpat interdum, sagittis id magna. Integer nec diam
+					sed elit ultricies molestie et in sapien. Praesent ut est eu tortor tempus elementum eu vel est. Sed ac lacinia augue. Etiam accumsan rutrum
+					consectetur. Nunc eu rhoncus urna. Sed sed erat sed neque tristique accumsan. Proin vitae odio at velit bibendum eleifend et in enim. Donec
+					velit sem, gravida non velit ac, luctus commodo ex.
+				</p>
+				<p>
+					Donec blandit, urna a iaculis cursus, nisl tellus feugiat magna, ut malesuada nibh justo ut sem. Sed suscipit elementum turpis gravida
+					vehicula. Donec id aliquam nulla. Mauris eget laoreet enim, et ornare orci. Mauris dictum, orci a rutrum sollicitudin, magna felis pharetra
+					nunc, ac pellentesque risus tellus quis tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dapibus risus ac nulla
+					consectetur, in suscipit ligula bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut
+					eget lobortis massa, eget fringilla sapien. Aenean sed leo vitae ante commodo hendrerit. Donec sit amet pulvinar mi.
+				</p>
+			</section>
+
+			<section>
+				<h1>The main content of the page</h1>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis odio fringilla, mollis neque a, porttitor ante. Sed vestibulum sed
+					turpis eu egestas. Praesent consequat turpis eu pharetra aliquam. Vivamus placerat quis nulla ut malesuada. Nam a pulvinar velit. Proin ac
+					tristique quam. Ut eu consectetur ligula. Duis ut ligula sed dolor aliquam vestibulum eget tempor nulla. Pellentesque faucibus varius nisl
+					non tempor. Cras et ex in diam blandit ullamcorper. Quisque justo nisl, convallis et luctus et, aliquet vitae nibh. Sed sed interdum lorem.
+					Pellentesque in sapien lobortis, efficitur libero eu, sodales leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+					inceptos himenaeos.
+				</p>
+
+				<table>
+					<tr>
+						<th colspan="2">A</th>
+					</tr>
+
+					<tr>
+						<td>B</td>
+						<td>G</td>
+					</tr>
+
+					<tr>
+						<td>C</td>
+						<td rowspan="3">D</td>
+					</tr>
+
+					<tr>
+						<td>E</td>
+					</tr>
+
+					<tr>
+						<td>F</td>
+					</tr>
+
+				</table>
+
+				<p>
+					Curabitur sit amet imperdiet urna. Nam tempus, metus in pretium tempus, massa urna sollicitudin tortor, non finibus sapien lorem vitae
+					libero. Ut sed justo id mauris sollicitudin iaculis a at enim. Nullam id efficitur erat, mollis sodales diam. Nam at sollicitudin enim.
+					Vivamus consectetur nibh ligula, quis euismod erat volutpat ut. Phasellus sit amet est vitae nisl bibendum maximus.
+				</p>
+				<p>
+					Aliquam dignissim arcu rutrum nunc ornare laoreet. Duis odio enim, varius sit amet volutpat interdum, sagittis id magna. Integer nec diam
+					sed elit ultricies molestie et in sapien. Praesent ut est eu tortor tempus elementum eu vel est. Sed ac lacinia augue. Etiam accumsan rutrum
+					consectetur. Nunc eu rhoncus urna. Sed sed erat sed neque tristique accumsan. Proin vitae odio at velit bibendum eleifend et in enim. Donec
+					velit sem, gravida non velit ac, luctus commodo ex.
+				</p>
+				<p>
+					Donec blandit, urna a iaculis cursus, nisl tellus feugiat magna, ut malesuada nibh justo ut sem. Sed suscipit elementum turpis gravida
+					vehicula. Donec id aliquam nulla. Mauris eget laoreet enim, et ornare orci. Mauris dictum, orci a rutrum sollicitudin, magna felis pharetra
+					nunc, ac pellentesque risus tellus quis tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dapibus risus ac nulla
+					consectetur, in suscipit ligula bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut
+					eget lobortis massa, eget fringilla sapien. Aenean sed leo vitae ante commodo hendrerit. Donec sit amet pulvinar mi.
+				</p>
+			</section>
+
+			<section>
+				<h1>The main content of the page</h1>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis odio fringilla, mollis neque a, porttitor ante. Sed vestibulum sed
+					turpis eu egestas. Praesent consequat turpis eu pharetra aliquam. Vivamus placerat quis nulla ut malesuada. Nam a pulvinar velit. Proin ac
+					tristique quam. Ut eu consectetur ligula. Duis ut ligula sed dolor aliquam vestibulum eget tempor nulla. Pellentesque faucibus varius nisl
+					non tempor. Cras et ex in diam blandit ullamcorper. Quisque justo nisl, convallis et luctus et, aliquet vitae nibh. Sed sed interdum lorem.
+					Pellentesque in sapien lobortis, efficitur libero eu, sodales leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+					inceptos himenaeos.
+				</p>
+				<p>
+					Sed odio justo, vestibulum ut imperdiet ac, pellentesque ac diam. Nullam faucibus libero pulvinar, malesuada libero non, pretium nisl. Sed
+					bibendum semper est a ultrices. In posuere commodo convallis. Pellentesque ac quam dapibus, rhoncus est non, laoreet diam. Sed sit amet
+					laoreet dolor. Nulla facilisi. Sed pretium risus et ligula hendrerit, eget porta turpis auctor. Proin sit amet diam eu neque rhoncus
+					fermentum ac vitae lectus. Morbi eleifend sapien sit amet dolor efficitur, et vehicula ante hendrerit.
+				</p>
+				<p>
+					Curabitur sit amet imperdiet urna. Nam tempus, metus in pretium tempus, massa urna sollicitudin tortor, non finibus sapien lorem vitae
+					libero. Ut sed justo id mauris sollicitudin iaculis a at enim. Nullam id efficitur erat, mollis sodales diam. Nam at sollicitudin enim.
+					Vivamus consectetur nibh ligula, quis euismod erat volutpat ut. Phasellus sit amet est vitae nisl bibendum maximus.
+				</p>
+				<p>
+					Aliquam dignissim arcu rutrum nunc ornare laoreet. Duis odio enim, varius sit amet volutpat interdum, sagittis id magna. Integer nec diam
+					sed elit ultricies molestie et in sapien. Praesent ut est eu tortor tempus elementum eu vel est. Sed ac lacinia augue. Etiam accumsan rutrum
+					consectetur. Nunc eu rhoncus urna. Sed sed erat sed neque tristique accumsan. Proin vitae odio at velit bibendum eleifend et in enim. Donec
+					velit sem, gravida non velit ac, luctus commodo ex.
+				</p>
+				<p>
+					Donec blandit, urna a iaculis cursus, nisl tellus feugiat magna, ut malesuada nibh justo ut sem. Sed suscipit elementum turpis gravida
+					vehicula. Donec id aliquam nulla. Mauris eget laoreet enim, et ornare orci. Mauris dictum, orci a rutrum sollicitudin, magna felis pharetra
+					nunc, ac pellentesque risus tellus quis tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dapibus risus ac nulla
+					consectetur, in suscipit ligula bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut
+					eget lobortis massa, eget fringilla sapien. Aenean sed leo vitae ante commodo hendrerit. Donec sit amet pulvinar mi.
+				</p>
+			</section>
+		</div>
+		<!-- Use flexboxes to make the two articles appear side-by-side. The second article should be twice as wide as the first-->
+		<div class="row">
+			<article id="first">
+				<h3>Featured Article</h3>
+				<hr />
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis odio fringilla, mollis neque a, porttitor ante. Sed vestibulum sed
+					turpis eu egestas. Praesent consequat turpis eu pharetra aliquam. Vivamus placerat quis nulla ut malesuada. Nam a pulvinar velit. Proin ac
+					tristique quam. Ut eu consectetur ligula. Duis ut ligula sed dolor aliquam vestibulum eget tempor nulla. Pellentesque faucibus varius nisl
+					non tempor. Cras et ex in diam blandit ullamcorper. Quisque justo nisl, convallis et luctus et, aliquet vitae nibh.</p>
+			</article>
+
+			<article id="second">
+				<h3>Featured Article</h3>
+				<hr />
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis odio fringilla, mollis neque a, porttitor ante. Sed vestibulum sed
+					turpis eu egestas. Praesent consequat turpis eu pharetra aliquam. Vivamus placerat quis nulla ut malesuada. Nam a pulvinar velit. Proin ac
+					tristique quam. Ut eu consectetur ligula. Duis ut ligula sed dolor aliquam vestibulum eget tempor nulla. Pellentesque faucibus varius nisl
+					non tempor. Cras et ex in diam blandit ullamcorper. Quisque justo nisl, convallis et luctus et, aliquet vitae nibh.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis odio fringilla, mollis neque a, porttitor ante. Sed vestibulum sed
+					turpis eu egestas. Praesent consequat turpis eu pharetra aliquam. Vivamus placerat quis nulla ut malesuada. Nam a pulvinar velit. Proin ac
+					tristique quam. Ut eu consectetur ligula. Duis ut ligula sed dolor aliquam vestibulum eget tempor nulla. Pellentesque faucibus varius nisl
+					non tempor. Cras et ex in diam blandit ullamcorper. Quisque justo nisl, convallis et luctus et, aliquet vitae nibh.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis odio fringilla, mollis neque a, porttitor ante. Sed vestibulum sed
+					turpis eu egestas. Praesent consequat turpis eu pharetra aliquam. Vivamus placerat quis nulla ut malesuada. Nam a pulvinar velit. Proin ac
+					tristique quam. Ut eu consectetur ligula. Duis ut ligula sed dolor aliquam vestibulum eget tempor nulla. Pellentesque faucibus varius nisl
+					non tempor. Cras et ex in diam blandit ullamcorper. Quisque justo nisl, convallis et luctus et, aliquet vitae nibh.</p>
+			</article>
+		</div>
+
+		<footer>
+			<p>&copy; This is the footer!</p>
+			<nav>Social Media Links</nav>
+		</footer>
+
+	</div>
+</body>
+
+</html>

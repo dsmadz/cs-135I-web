@@ -1,0 +1,227 @@
+/*
+Student: Douglas Madzier
+Date:    Wednesday, January 10, 2024
+Class:   CS-1351 - Class Work-1
+*/
+
+/* layout-horiz.css
+   creating a page with multiple rows 
+   of columns
+*/
+/* Font styles */
+body {
+  font-family: abel, helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 210%;
+  font-family: 'Abril Fatface', arial, sans-serif;
+}
+
+/*Navigation styles */
+.linktrigger {
+  display: none;
+}
+nav {
+  background-color: silver;
+  position: fixed;
+  width: 50%;
+  top: 0;
+  right: 0;
+}
+
+/********************************* CHANGE NEEDED ********************************/
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 1em;
+  border-right: 1px dotted maroon;
+  color: maroon;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: maroon;
+  font-style: italic;
+  background-color: yellow;
+}
+
+/* drop down menu styles 
+   .dd is the class applied to the 
+       list item containing the trigger
+   .ddtrigger is the class applied to
+	   the anchor within the li  */
+.dd ul {
+  display: none; /* hides nested ul list of links */
+  position: absolute;
+  background-color: gray;
+  z-index: 5;
+}
+
+.dd:hover ul {
+  display: block; /* shows nested ul list of links after users
+	                                hover over the designated list item */
+}
+
+.dd ul li {
+  float: none;
+  border-bottom: 1px dotted maroon;
+}
+
+.dd ul li a {
+  color: white;
+}
+
+.dd ul li a:hover {
+  color: maroon;
+  font-style: italic;
+  background-color: silver;
+}
+
+/* keep the social media links in the
+   footer from overlaying the main nav */
+footer nav {
+  position: static;
+  width: auto;
+}
+
+/********************************* CHANGE NEEDED ********************************/
+.row {
+  /* Convert your container elements with the row class into a flexbox-container */
+  display: flex;
+}
+
+section {
+  padding: 1.6%;
+}
+
+article {
+  padding: 1%;
+  background-color: lightblue;
+}
+
+.row article:first-of-type {
+  margin-right: 2%;
+}
+
+/********************************* CHANGE NEEDED ********************************/
+/* Add styles here to make the second article appear twice as wide as the first one does */
+
+#first {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+#second {
+  flex-grow: 2;
+  flex-basis: 0;
+}
+
+/* Table related styles */
+table {
+  width: 95%;
+  margin: 1em auto;
+  border: 1px solid silver;
+  border-collapse: collapse;
+  caption-side: bottom;
+}
+
+caption {
+  font-size: 80%;
+  font-style: italic;
+  color: maroon;
+}
+
+td,
+th {
+  border-bottom: 1px solid silver;
+}
+
+tr:hover {
+  font-weight: bold;
+  background-color: silver;
+}
+
+tbody th,
+thead th:first-of-type {
+  text-align: left;
+}
+col.rowheaders {
+  background-color: lightyellow;
+}
+
+tbody th {
+  padding-left: 0.5em;
+  font-weight: normal;
+}
+
+thead {
+  background-color: maroon;
+  color: white;
+}
+
+tbody td {
+  text-align: right;
+  padding: 0.5em;
+}
+
+@media screen and (max-width: 500px) {
+  /********************************* CHANGE NEEDED ********************************/
+  .row {
+    /* change multi-column into single column */
+    flex-direction: column;
+  }
+
+  .row article:first-of-type {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+
+  /* Toggle the display of navbar */
+  .linktrigger {
+    display: block;
+  }
+
+  .trigger ul {
+    display: none;
+  }
+
+  .trigger:hover ul {
+    display: block;
+  }
+
+  /* Clean up the display of the navbar in small browsers */
+  nav {
+    width: 100%;
+  }
+
+  /********************************* CHANGE NEEDED ********************************/
+  nav ul {
+    /* Make the unordered list display the flexbox items vertically, 
+		   and take up 100% of the available width */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li ul li a {
+    border-right: none;
+    border-bottom: 1px dotted maroon;
+    width: 100%;
+  }
+
+  nav ul li ul li ul li {
+    padding-left: 2em;
+  }
+
+  header {
+    margin-top: 3em;
+  }
+}

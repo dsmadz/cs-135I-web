@@ -1,0 +1,318 @@
+/***********************************
+Auth: 	Douglas Madzier
+Date: 	Saturday, February 03, 2024
+Class: 	CS-135I Week-3 Class Activity
+***********************************/
+
+/*
+@file: primary.css
+@desc: experiments with CSS transitions and animations
+
+	1. Basic element formatting
+	2. Header transformation
+	3. Side bar formatting
+	4. Block reveal element formatting
+	5. Toggle side bar effect - checkbox hack
+	6. Animation Definitions
+*/
+
+/*********** 1. BASIC ELEMENT FORMATTING **********************/
+html {
+  background-color: aliceblue;
+  font-family: arial, helvetica, sans-serif;
+}
+
+body {
+  width: 80%;
+  background-color: white;
+  margin: 2em auto;
+  padding: 1em;
+}
+
+header {
+  border-left: 1px solid navy;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1em;
+  letter-spacing: 0.1em;
+  background-color: white;
+}
+
+header h1,
+header h2 {
+  color: white;
+  mix-blend-mode: difference; /* This property will change the foreground color to the 
+									   color-wheel opposite of the background color - handy! */
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+main article {
+  flex-basis: 70%;
+  padding: 0 2em;
+}
+
+main aside {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+aside.ad {
+  border-left: 1px dotted silver;
+  padding: 0 1em;
+  flex: 1;
+}
+
+aside label {
+  align-self: flex-end;
+  border: 1px solid navy;
+  border-radius: 0.4em;
+  padding: 0.15em 0.3em;
+}
+
+footer {
+  border-top: 1px dotted navy;
+  padding: 1em;
+}
+
+/*********** 2. HEADER TRANSFORMATION **********************/
+
+/* create a style definition that creates a navy, rounded, 2em wide rectangle BEFORE the header.
+   other things of note:
+	-the height should be 120%
+	-absolutely position the rectangle so that it is 0.75 above the top of the header 
+	 and 0.75 to the left
+	-any transformation should take 3 seconds to complete. Use the transition timing function
+	 of your choice */
+
+header::before {
+  content: '';
+  position: absolute;
+  top: -0.75em;
+  left: -0.75em;
+  width: 2em;
+  height: 120%;
+  background-color: #000;
+  border-radius: 60%;
+  transition: transform 5s;
+  transition-timing-function: ease-out;
+}
+
+/* create a style definition so that when users hover over the header, the BEFORE element
+   becomes 200 times its width and 5 times its original height */
+
+header:hover::before {
+  transform: scale(200, 5);
+}
+
+/*********** 3. SIDE BAR ELEMENT FORMATTING **********************/
+aside.ad nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+aside.ad nav ul li {
+  background-color: silver;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+aside.ad nav ul li a {
+  text-decoration: none;
+  color: crimson;
+  font-weight: bold;
+}
+
+aside.ad img {
+  margin: 1em auto;
+  border: 8px double navy;
+  opacity: 20%;
+  filter: grayscale();
+}
+
+/* Add style declarations that associate hovering over the image with the spotLight
+   animation. Make the animation take 3 seconds to complete. */
+aside.ad img:hover {
+  opacity: 100%;
+  filter: grayscale(0%);
+  animation-name: spotLight;
+  animation-duration: 3s;
+}
+
+/* Add style declarations that associate the hover pseudoclass with 
+   a button tilt animation that lasts 1 second */
+aside.ad nav ul li:hover {
+  box-shadow: 1px 2px 4px #888888;
+  animation-name: buttonTilt;
+  animation-duration: 0.5s;
+}
+
+/*********** 4. BLOCK REVEAL ELEMENT FORMATTING **********************/
+/* Add style declarations that associate the first h3 element in the aside with
+   a showRedText animation that lasts 4 seconds */
+aside.ad h3:first-of-type {
+  font-size: 200%;
+  color: crimson;
+  position: relative;
+  overflow: hidden;
+  animation-name: showRedText;
+  animation-duration: 2s;
+}
+
+/* Add style declarations that associate this colored block with both a blockIn and blockOut
+   animation. Each of the animations should last for 4 seconds */
+aside.ad h3:first-of-type::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: navy;
+  animation: blockIn, blockOut 4s;
+}
+
+/* Add style declarationd that associate the last h3 element in the aside with
+   a showBlueText animation that lasts 4 seconds, and a zoomText animation that lasts 2 seconds.
+   The showBlueText should happen only one time, and start right away. The zoomText Animation
+   should start after a 4 second delay (so it starts right after showBlueText) and repeat twice   */
+aside.ad h3:last-of-type {
+  text-align: right;
+  font-size: 200%;
+  color: navy;
+  position: relative;
+  overflow: hidden;
+  animation-name: showBlueText, zoomText;
+  animation-duration: 4s, 2s;
+  animation-delay: 0s, 4s;
+}
+
+/* Add style declarations that associate this colored block with both a blockIn and blockOut
+   animation. Each of the animations should last for 4 seconds */
+aside.ad h3:last-of-type::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: crimson;
+  animation: blockIn, blockOut 4s;
+}
+
+/*********** 5. TOGGLE SIDEBAR EFFECT - CHECKBOX HACK **********************/
+/* Create style definitions that 
+  1. hide the chkToggle checkbox 
+  2. use the checked pseudoclass and a sibling selector to hide the aside after the checkbox */
+
+input#chkToggle {
+  display: none;
+}
+
+input#chkToggle:checked + aside {
+  visibility: hidden;
+}
+
+/*********** 6. ANIMATION DEFINITIONS **********************/
+@keyframes spotLight {
+  from {
+    opacity: 20%;
+    filter: grayscale();
+  }
+  to {
+    opacity: 100%;
+    filter: grayscale(0%);
+  }
+}
+
+/* Create a showRedText animation that will change the color property from transparent
+   to crimson and change the font-size from 0 to 200% */
+
+@keyframes showRedText {
+  from {
+    color: transparent;
+  }
+  to {
+    color: crimson;
+  }
+}
+
+/* Create a showBlueText animation that will change the color property from transparent
+   to navy and change the font-size from 0 to 200% */
+
+@keyframes showBlueText {
+  from {
+    color: transparent;
+  }
+  to {
+    color: navy;
+  }
+}
+
+/* Create a blockIn animation that will change width from 0 (at 0%) to 100% (at 100%) */
+
+@keyframes blockIn {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Create a blockOut animation that will change width from 100% (at 0%) to 0 (at 100%) */
+
+@keyframes blockOut {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/* Create a zoomText animation that will change the font size from 200% (at 0%) to 250% (at 50%)
+   and then back to 200% (at 100%) */
+
+@keyframes zoomText {
+  0% {
+    font-size: 200%;
+  }
+  50% {
+    font-size: 250%;
+  }
+  100% {
+    font-size: 200%;
+  }
+}
+
+/* Create a buttonTilt animation changes the box-shadow, padding, and transform properties:
+	0% and 100% box-shadow is 1px 2px 4px #888888, padding is 1em and rotation is 0 degrees
+	25% and 75% box-shadow is 2px 4px 4px #666666, padding is 1.15em and rotation is 3 degrees
+	50% box-shadow is 2px 4px 4px #555555, padding is 1.15em and rotation is -3 degrees*/
+
+@keyframes buttonTilt {
+  0%,
+  100% {
+    box-shadow: 1px 2px 4px #888;
+    padding: 1em;
+    transform: rotate(0deg);
+  }
+  25%,
+  75% {
+    box-shadow: 2px 4px 4px #666;
+    padding: 1.15em;
+    transform: rotate(3deg);
+  }
+  50% {
+    box-shadow: 2px 4px 4pc #555;
+    padding: 1.15em;
+    transform: rotate(-3deg);
+  }
+}
