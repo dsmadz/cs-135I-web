@@ -3,7 +3,9 @@
 
 <head>
     <!--
-
+    Auth:   Douglas Madzier
+    Date:   Tuesday, February 06, 2024
+    Class:  CS135I Week 03 Homework
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +18,13 @@
         <header>
             <div id="left">
                 <ul>
-                    <li>Art</li>
-                    <li>About</li>
+                    <li><a href="#">Art</a></li>
+                    <li><a href="#">Images&#x25BE</a>
+                        <ul class="dropdown">
+                            <li><a href="https://www.nasa.gov/">NASA</a></li>
+                            <li><a href="https://www.nasa.gov/images/">NASA Images</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div id="center">
@@ -26,19 +33,41 @@
             </div>
             <div id="right">
                 <ul>
-                    <li>Shop</li>
-                    <li>Contact</li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
         </header>
 
         <main>
-            <div id="img-1"><img src="img/img-1.png" alt="Image of space."></div>
-            <div id="img-2"><img src="img/img-2.png" alt="Image of space."></div>
-            <div id="img-3"><img src="img/img-3.png" alt="Image of space."></div>
-            <div id="img-4"><img src="img/img-4.png" alt="Image of space."></div>
-            <div id="img-5"><img src="img/img-5.png" alt="Image of space."></div>
-            <div id="img-6"><img src="img/img-6.png" alt="Image of space."></div>
+            <div class="img-container" id="img-1">
+                <img class="image" src="img/img-1.png" alt="Image of space.">
+                <div class="overlay">
+                    <h1>NASA</h1>
+                    <h2>Images courtesy of:</h2>
+                </div>
+            </div>
+            <div class="img-container" id="img-2">
+                <img class="image" src="img/img-2.png" alt="Image of space.">
+                <div class="overlay">
+                    <h1>NASA</h1>
+                    <h2>Images courtesy of:</h2>
+                </div>
+            </div>
+            <div class="img-container" id="img-3">
+                <img class="image" src="img/img-3.png" alt="Image of space.">
+                <div class="overlay">
+                    <h1>NASA</h1>
+                    <h2>Images courtesy of:</h2>
+                </div>
+            </div>
+            <div class="img-container" id="img-4">
+                <img class="image" src="img/img-4.png" alt="Image of space.">
+                <div class="overlay">
+                    <h1>NASA</h1>
+                    <h2>Images courtesy of:</h2>
+                </div>
+            </div>
         </main>
         <footer>
             <p>dsmadz&copy;</p>
