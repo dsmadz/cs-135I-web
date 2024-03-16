@@ -1,0 +1,77 @@
+/* 
+    auth:   Doug Madzier
+    date:   Fri, March 08, 2024
+    class:  CS135I Final Project
+*/
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&family=Wix+Madefor+Display:wght@400..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  display: block;
+  content: "";
+  height: 90px;
+}
+
+body {
+  font-family: "Wix Madefor Display", sans-serif;
+}
+
+.container {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+#headline p {
+  width: 100%;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+#mainRecipes {
+  justify-content: space-between;
+}
+
+.container-fluid {
+  margin: 0;
+}
+
+#whatsHappening {
+  background-color: #eaede6;
+}
+
+nav,
+#newsletter {
+  background-color: #80af74;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+a.active {
+  font-weight: 700;
+}
+
+#primary-card-text {
+  padding-top: 10px;
+}
+
+.accordion {
+  --bs-accordion-active-bg: #abe09d;
+  --bs-accordion-border-color: green;
+  --bs-accordion-btn-bg: #eaede6;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  .news-input {
+    max-width: 50%;
+  }
+}

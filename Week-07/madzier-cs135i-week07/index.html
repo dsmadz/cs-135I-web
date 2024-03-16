@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 
+            auth:   Doug Madzier
+            date:   Tue, March 05, 2024
+            class:  CS135I Week07 Homework
+         -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+
+        <link rel="stylesheet" href="/styles/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="pe-lg-0 ps-lg-5 container-fluid justify-content-between">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/logo.png" height="60" alt="logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                    <div class="nav_left d-lg-flex align-items-center">
+                        <nav>
+                            <div class="nav d-block d-lg-flex nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Home</button>
+                                <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab">About</button>
+                                <button class="nav-link" id="timing-tab" data-bs-toggle="tab" data-bs-target="#timing" type="button" role="tab">
+                                    High-Tech
+                                </button>
+                                <button class="nav-link" id="courses-tab" data-bs-toggle="tab" data-bs-target="#courses" type="button" role="tab">
+                                    Modern
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-auto sticky-top">
+                    <div class="d-flex flex-sm-column flex-row flex-nowrap align-items-center sticky-top">
+                        <a
+                            href="/"
+                            class="d-block p-3 text-decoration-none"
+                            title=""
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="right"
+                            data-bs-original-title="Icon-only"
+                        >
+                            <i class="bi-bootstrap fs-1"></i>
+                        </a>
+                        <ul
+                            class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center"
+                        >
+                            <li class="nav-item">
+                                <a
+                                    href="#"
+                                    class="nav-link py-3 px-2"
+                                    title=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="right"
+                                    data-bs-original-title="X"
+                                >
+                                    <i class="bi-twitter-x fs-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="nav-link py-3 px-2"
+                                    title=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="right"
+                                    data-bs-original-title="Facebook"
+                                >
+                                    <i class="bi-facebook fs-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="nav-link py-3 px-2"
+                                    title=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="right"
+                                    data-bs-original-title="Whatsapp"
+                                >
+                                    <i class="bi-whatsapp fs-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="nav-link py-3 px-2"
+                                    title=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="right"
+                                    data-bs-original-title="Linkedin"
+                                >
+                                    <i class="bi-linkedin fs-1"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="nav-link py-3 px-2"
+                                    title=""
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="right"
+                                    data-bs-original-title="Telegram"
+                                >
+                                    <i class="bi-telegram fs-1"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown">
+                            <a
+                                href="#"
+                                class="d-flex align-items-center justify-content-center p-3 link-light text-decoration-none dropdown-toggle"
+                                id="dropdownUser3"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="bi-person-circle h2"></i>
+                            </a>
+                            <ul class="dropdown-menu text-small shadow">
+                                <li><a class="dropdown-item" href="#">CS135I</a></li>
+                                <li><a class="dropdown-item" href="#">Week-07</a></li>
+                                <li><a class="dropdown-item" href="#">Doug Madzier</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

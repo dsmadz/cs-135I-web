@@ -1,0 +1,93 @@
+html {
+	background-color: silver;
+	background-image: linear-gradient(silver, #303030);
+	height: 100%;
+}
+
+body {
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 3em auto;
+	background-color: white;
+	width: 80%;
+	border-radius: 1em;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	font-family: KoHo, helvetica, sans-serif;
+	padding-right: 1em;
+}
+
+body:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+			
+h1, footer {
+	width: 100%;
+	text-align: center;
+}
+
+h1 {
+	border-bottom: 1px solid silver;
+	padding: 1em 0;
+	margin-bottom: 1em;
+}
+
+
+footer {
+	border-top: 1px solid silver;
+	margin-top: 1em;
+}
+
+main {
+	margin-left: 1em;
+}
+
+aside {
+	float: right;
+	padding: 0.5em 0.5em 0.5em 0.75em;
+	border-left: 1em solid silver;
+	background-color: #CCD;
+}
+
+/* inspired by Eric Meyer's Strengthening the Links @ https://web.archive.org/web/20160316174915/http://css.maxdesign.com.au/listamatic/vertical09.htm */
+nav ul {
+	padding: 0 1px 1px;
+	margin-left: 0;
+	font: bold 0.9em helvetica, sans-serif;
+	background: silver;
+	width: 13em;
+}
+
+nav ul li {
+	list-style: none;
+	margin: 0;
+	text-align: left;
+}
+
+nav ul li a {
+	display: block;
+	padding: 0.5em 0.5em 0.5em 0.75em;
+	border-left: 1em solid silver;
+	background-color: #CCD;
+	text-decoration: none;
+}
+
+nav ul li a:link { 
+	color: #448; 
+}
+
+nav ul li a:visited { 
+	color: #667; 
+}
+
+nav ul li a:hover {
+	border-color: #CCD;
+	color: #CCD;
+	background: #448;
+}
+
+a.active {
+	border-color: lightyellow;
+}

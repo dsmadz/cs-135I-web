@@ -1,0 +1,64 @@
+
+/**
+    auth:   Doug Madzier
+    date:   Tue, March 05, 2024
+    class:  CS135I Week07 Homework
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+nav {
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    background: url(/img/fabio-oyXis2kALVg-unsplash.jpg) repeat 0 0;
+}
+div.bg-dark {
+    background-color: #14263a;
+}
+.nav_left {
+    background-color: #14263a;
+    border-bottom-left-radius: 48px;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    border-color: transparent;
+    border-top: 4px solid #fff;
+    color: #fff;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin: 0 30px 0 40px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-link {
+    padding: 1rem 0.5rem;
+    color: #fff;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #fff;
+}
+
+.navbar-toggler {
+    border: 3px solid #14263a;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(35, 76, 203, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}

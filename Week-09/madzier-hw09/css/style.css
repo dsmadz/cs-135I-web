@@ -1,0 +1,74 @@
+/** 
+*@auth:   Doug Madzier
+*@date:   Wed, March 13, 2024
+*@class:  cs135i week 09
+*/
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+body {
+  padding: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #527280;
+  font-family: "Madimi One", sans-serif;
+  line-height: 2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  background-color: #e6e6e6;
+  padding: 20px 40px;
+  box-shadow: 0 5px 10px 0 #333;
+  border-radius: 20px;
+}
+@media screen and (max-width: 800px) {
+  .container {
+    width: 375px;
+    padding: 10px;
+  }
+}
+
+h1 {
+  text-align: center;
+  width: 80%;
+  border-top: dotted 2px #3b5998;
+  border-bottom: solid 2px #20b2aa;
+}
+
+a {
+  color: #20b2aa;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 0;
+  color: #20b2aa;
+  background-color: #3b5998;
+  border-radius: 10px;
+}
+.btn:hover {
+  color: #3b5998;
+  background-color: #20b2aa;
+}
+
+ul#menu {
+  list-style: none;
+  padding: 0;
+}
+ul#menu li {
+  padding: 5px 0;
+}
+ul#menu li a {
+  color: #20b2aa;
+  text-decoration: none;
+}
+ul#menu li a:hover {
+  color: #3b5998;
+}/*# sourceMappingURL=style.css.map */
