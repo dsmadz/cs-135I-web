@@ -10,22 +10,15 @@
   box-sizing: border-box;
 }
 
-body::before {
-  display: block;
-  content: "";
-  height: 90px;
-}
-
 body {
+  padding-top: 80px;
+  background-color: #eeeeee;
   font-family: "Wix Madefor Display", sans-serif;
+  height: 100vh;
+  width: 100vw;
 }
 
-.container {
-  padding: 0;
-  margin: 0 auto;
-}
-
-.container img {
+.img-header img {
   width: 100%;
   height: auto;
 }
@@ -44,15 +37,18 @@ body {
   margin: 0;
 }
 
-#whatsHappening {
-  background-color: #eaede6;
+div.recipe-ingredients {
+  max-width: 800px;
 }
 
 nav,
-#newsletter {
+footer {
   background-color: #80af74;
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+#img-recipe {
+  max-width: 50%;
 }
 
 a.active {
@@ -70,8 +66,6 @@ a.active {
   --bs-accordion-btn-focus-box-shadow: none;
 }
 
-@media (min-width: 768px) {
-  .news-input {
-    max-width: 50%;
-  }
+.recipe-font {
+  font-family: "Special Elite", sans-serif;
 }

@@ -10,85 +10,75 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Madzier Family Recipes</title>
         <link rel="shortcut icon" href="/media/favicon.png" type="image/x-icon" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous"
-        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
 
-    <body>
+    <body class="d-flex flex-column">
         <!-- Navbar -->
-        <section>
-            <div class="container px-5">
-                <nav class="navbar navbar-expand-lg navbar-light fixed-top m-0 px-5 py-3">
-                    <!-- Navbar brand -->
-                    <a class="navbar-brand px-5" style="font-size: 1.8em" href="#">Madzier Family Recipes</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse px-4" id="navbarNavDropdown">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/dinner/dinner.html">Dinner</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Lunch</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Breakfast</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Dessert</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top m-auto px-5 py-3">
+            <!-- Navbar brand -->
+            <div class="container p-0 m-auto">
+                <a class="navbar-brand text-wrap" style="font-size: 1.6rem" href="#">Madzier Family Recipes</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                    <span class="navbar-toggler-icon justify-content-end"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dinner/dinner.html">Dinner</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Lunch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Breakfast</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dessert</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </section>
-
+        </nav>
         <header id="headline" class="px-5 pt-5 pb-4">
-            <div class="container">
-                <img src="media/header-image.png" alt="Spices" />
+            <div class="container img-header p-0">
+                <img class="d-none d-md-inline" src="media/header-image.png" alt="Spices" />
 
-                <p>
-                    "This is a family website with recipes we have collected over the years. Some of these recipes are from my grandmother (1913-2010), some are
-                    from my mother and others are from cookbooks. Some recipes are even from the early days of the web and were printed on a dot-matrix
-                    printer."
-                </p>
-                <p>
-                    I made this site so family members from afar will always be able to find those missing holiday favorites or see what my family has been
-                    making.
-                </p>
+                <p class="pt-5">"This is a family website with recipes we have collected over the years. Some of these recipes are from my grandmother (1913-2010), some are from my mother and others are from cookbooks. Some recipes are even from the early days of the web and were printed on a dot-matrix printer."</p>
+                <p>I made this site so family members from afar will always be able to find those missing holiday favorites or see what my family has been making.</p>
             </div>
         </header>
+        <!-- Recipe Showcase -->
         <main class="p-5">
             <div id="mainRecipes" class="container">
                 <div class="row justify-content-around">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card" style="width: 21rem">
+                    <div class="col-lg-3">
+                        <div class="card text-center">
                             <img src="media/zuppa-tuscana-500.png" class="card-img-top" alt="Picture of zuppa tuscana." />
                             <div class="card-body">
                                 <p class="card-text">Zuppa Tuscana</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card" style="width: 21rem">
-                            <img src="media/chile-verde-500.png" class="card-img-top" alt="Picture of chili verde." />
-                            <div class="card-body">
-                                <p class="card-text">Pork Chili Verde</p>
-                            </div>
+                    <div class="col-lg-3">
+                        <div class="card text-center">
+                            <a href="/dinner/pork-chili-verde.html">
+                                <img src="media/chile-verde-500.png" class="card-img-top" alt="Picture of chili verde." />
+                                <div class="card-body">
+                                    <p class="card-text">Pork Chili Verde</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card" style="width: 21rem">
+                    <div class="col-lg-3">
+                        <div class="card text-center">
                             <img src="media/Golumpki-500.png" class="card-img-top" alt="Picture of stuffed cabbage rolls." />
                             <div class="card-body">
                                 <p class="card-text">Stuffed Cabbage Rolls (Gołąbki)</p>
@@ -98,71 +88,53 @@
                 </div>
             </div>
         </main>
-        <!-- Newsletter -->
-        <section id="newsletter" class="p-5">
-            <div class="container">
-                <div class="d-md-flex justify-content-between align-items-center">
-                    <div class="my-3">
-                        <h3 class="mb-3 mb-md-0">Sign Up For Our Newsletter.</h3>
-                    </div>
-                    <div class="input-group my-3 news-input">
-                        <input type="text" class="form-control" placeholder="Enter Email" />
-                        <button class="btn btn-lg btn-success" type="button">Button</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <!-- FAQ -->
         <section class="p-5">
             <div class="container">
                 <h2 class="text-center mb-4">FAQs</h2>
-                <div class="accordion" id="faq">
+                <div class="accordion" id="faqs">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-attractBees">
-                                Natives to Attract Bees
-                            </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-whoFor">Who is this site for?</button>
                         </h2>
-                        <div id="flush-attractBees" class="accordion-collapse collapse" data-bs-parent="#gardenProjects">
-                            <div class="accordion-body">
-                                Though native bees and other insects also serve as pollinators, honey bees provide most of the pollination for hundreds of our
-                                favorite food crops.
-                            </div>
+                        <div id="flush-whoFor" class="accordion-collapse collapse" data-bs-parent="#faqs">
+                            <div class="accordion-body">Although this site was made for my family to share our collected recipes, this site is also for anyone who likes to explore recipes and enjoys cooking.</div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-birdHaven">
-                                Create a Bird Haven
-                            </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-whatRecipes">What recipes will be on the site.</button>
                         </h2>
-                        <div id="flush-birdHaven" class="accordion-collapse collapse" data-bs-parent="#gardenProjects">
-                            <div class="accordion-body">
-                                Our combination of rivers, parks and mild climate allows Portland to host a vast array of birds and wildlife, and many will
-                                visit or even nest in local yards given a few simple provisions.
-                            </div>
+                        <div id="flush-whatRecipes" class="accordion-collapse collapse" data-bs-parent="#faqs">
+                            <div class="accordion-body">This site will host a collection of some of our favorite family recipes. Some dating back to the 40's all the way up to today. We will eventually have recipes ranging from breakfasts to classic holiday desserts.</div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-attractButterflies">
-                                Attracting Butterflies
-                            </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-favoriteRecipes">What are some of your favorite recipes?</button>
                         </h2>
-                        <div id="flush-attractButterflies" class="accordion-collapse collapse" data-bs-parent="#gardenProjects">
+                        <div id="flush-favoriteRecipes" class="accordion-collapse collapse" data-bs-parent="#faqs">
                             <div class="accordion-body">
-                                Many butterflies are native to our region and one way to be able to best attract them is by planting natives.
+                                My families favorite recipes would have to include "Shotgun Willie Chili", "Pork Chili Verde" and "Pasta Carbonara". My personal favorite would always and forever be, "Boiled Beef Tongue", thanks to my Polish heritage. Not a lot of people are willing to fix this unless they grew up
+                                eating it.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Footer section -->
+        <footer class="footer mt-auto">
+            <div class="container">
+                <div class="d-flex justify-content-end align-items-center py-3">
+                    <div>
+                        <span class="mb-3 mb-md-0 lead text-muted">© 2024 dsmadz, Inc</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <!-- Bootstrap script -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"
-        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
